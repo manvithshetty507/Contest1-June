@@ -26,7 +26,7 @@ function addData() {
   let first = arr.length;
     let person = {id:first,name:"susan",age:"20",profession:"intern"};
     arr.push(person);
-    console.log(person);
+    console.log(arr);
 }
 
 function removeAdmin() {
@@ -36,10 +36,12 @@ function removeAdmin() {
       arr.splice(i,1);
     }
   }
+  console.log(arr);
 }
 
 function concatenateArray() {
   //Write your code here, just console.log
+
   let first = arr.length;
   let newArr = [
     { id: first++, name: "smith", age: "21", profession: "developer" },
@@ -47,4 +49,5 @@ function concatenateArray() {
     { id: first++, name: "karan", age: "19", profession: "marketing" }
   ];
   arr.push(...newArr);
+  console.log(arr);
 }
