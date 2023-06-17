@@ -23,15 +23,16 @@ function PrintDeveloperbyForEach() {
 
 function addData() {
   //Write your code here, just console.log
-  let first = arr.length;
-    let person = {id:first,name:"susan",age:"20",profession:"intern"};
+    let last = arr.length + 1;
+    let person = {id:last,name:"susan",age:"20",profession:"intern"};
     arr.push(person);
     console.log(arr);
 }
 
 function removeAdmin() {
   //Write your code here, just console.log
-  for(let i=0;i<arr.length;i++) {
+  let lastId = arr[arr.length-1].id;
+  for(let i=0;i<lastId;i++) {
     if(arr[i].profession == 'admin') {
       arr.splice(i,1);
     }
@@ -42,11 +43,11 @@ function removeAdmin() {
 function concatenateArray() {
   //Write your code here, just console.log
 
-  let first = arr.length;
+  let firstPerson = arr.length + 1;
   let newArr = [
-    { id: first++, name: "smith", age: "21", profession: "developer" },
-    { id: first++, name: "Mosh", age: "25", profession: "Manager" },
-    { id: first++, name: "karan", age: "19", profession: "marketing" }
+    { id: firstPerson, name: "smith", age: "21", profession: "developer" },
+    { id: firstPerson + 1, name: "Mosh", age: "25", profession: "Manager" },
+    { id: firstPerson + 2, name: "karan", age: "19", profession: "marketing" }
   ];
   arr.push(...newArr);
   console.log(arr);
